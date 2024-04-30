@@ -245,7 +245,7 @@
         font-size: 24px;
         font-weight: 600;
         text-align: center;
-        color: $secondary;
+        color: $primary;
     }
 
     .second-header {
@@ -436,10 +436,22 @@
 
 // About us
 .about-us-dark {
-    background-color: $dark;
-    padding: 4rem 0 !important;
+    position: relative;
+    padding: 4rem 0;
     color: $white;
+
+    ::after{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: url("../img/magicpattern-mesh-gradient.png") no-repeat center center/cover;
+        filter: blur(1px) brightness(50%);
+        padding: 4rem 0 !important;
+    }
 }
+
 
 .about-us {
     padding-bottom: 3rem;
@@ -470,6 +482,26 @@
             @media (max-width: 992px) {
                 width: 100%;
                 margin-bottom: 2rem;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                list-style-type: none;
+                padding-left: 0;
+
+                @media (max-width: 430px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            li::before {
+                content: "\f058";
+                color: $primary;
+                font-size: 1.4rem;
+                font-family: "Font Awesome 5 Free";
+                padding: 0 6px 0 0;
             }
         }
 
@@ -554,14 +586,6 @@
                 align-items: center;
                 border-radius: 50%;
                 border: 2px solid #afafaf;
-                // background: hsla(0, 96%, 39%, 1);
-                // background: radial-gradient(circle, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
-
-                // background: hsla(0, 0%, 0%, 1);
-
-                // background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(48, 67%, 21%, 1) 0%, hsla(0, 96%, 39%, 1) 76%);
-                // margin-bottom: 0.8rem;
-
                 .icon {
                     width: 70%;
                     height: 70%;
@@ -586,8 +610,9 @@
                 padding: 8px 0;
             }
 
-            .buttons{
+            .buttons {
                 gap: 0.5rem;
+
                 @media (max-width: 300px) {
                     flex-wrap: wrap;
                 }
@@ -599,6 +624,7 @@
 // Ful CTA
 .full-cta {
     position: relative;
+
     .bg-img {
         position: absolute;
         top: 0;
@@ -608,6 +634,7 @@
         z-index: -1;
         object-fit: cover;
     }
+
     .flex {
 
 
@@ -629,13 +656,14 @@
             width: 50%;
             padding: 5rem 2rem;
             background-color: #c40404e5;
+            position: relative;
 
-            h4{
+            h4 {
                 font-weight: 600;
                 color: $white;
             }
 
-            .btn{
+            .btn {
                 padding: 8px auto;
             }
         }
@@ -757,6 +785,43 @@
 
     }
 }
+
+// Resources
+.resources {
+    .flex {
+        display: flex;
+        padding: 2rem 0;
+
+        .resource {
+            padding: 1rem;
+            border-radius: 14px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+
+            .img-div {
+                margin-bottom: 1rem;
+                max-height: 20rem;
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 12px;
+                    object-fit: cover;
+                }
+            }
+
+            .info-div {
+                .title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    min-height: 3.3rem;
+                }
+            }
+        }
+    }
+}
+
 // Services
 .services {
     color: $white;
@@ -1211,23 +1276,3 @@ footer {
     }
 }
 
-// Service Areas
-.service-cities {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    list-style-type: none;
-
-    li {
-        font-weight: 500;
-        font-size: 18px;
-        margin: 0 auto;
-
-        &::before {
-            font-family: "FontAwesome";
-            content: "\f3c5";
-            padding-right: 0.5rem;
-            color: $secondary;
-        }
-    }
-}
