@@ -13799,11 +13799,29 @@ nav .nav-cta-div .nav-cta {
 .step-process .steps-side .step .number p {
   font-size: 2rem;
   font-weight: 600;
-  color: #e0b402;
+  color: #c40404;
 }
 .step-process .steps-side .step .step-info .header {
   font-size: 1.7rem;
   margin-bottom: 0.6rem;
+}
+
+.services-list.services-list-dark {
+  position: relative;
+  padding: 4rem 0;
+  color: #fcfef7;
+}
+.services-list.services-list-dark ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../img/magicpattern-mesh-gradient.png") no-repeat center center/cover;
+  filter: blur(2px) brightness(40%);
+  padding: 4rem 0 !important;
 }
 
 .services-list .grid {
@@ -14929,6 +14947,24 @@ footer .footer-col .text-info p a {
 }
 .book-online .step.finish {
   background-color: #04AA6D;
+}
+
+.details .part {
+  margin-bottom: 2rem;
+}
+.details .part h3, .details .part .h3 {
+  font-size: 27px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+.details .part p {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: justify;
+}
+.details .part ul li {
+  margin-bottom: 0.2rem;
 }
 
 .lb-loader,
