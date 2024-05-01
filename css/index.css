@@ -13163,12 +13163,12 @@ nav .nav-cta-div .nav-cta {
 }
 @media (max-width: 1400px) {
   .logo {
-    width: 17rem;
+    width: 10rem;
   }
 }
 @media (max-width: 1200px) {
   .logo {
-    width: 95%;
+    width: 10rem;
     max-width: 10rem;
     z-index: inherit;
     margin-top: 0;
@@ -13180,12 +13180,6 @@ nav .nav-cta-div .nav-cta {
   background: linear-gradient(90deg, hsl(0, 96%, 39%) 0%, hsl(0, 93%, 28%) 100%);
   background: -moz-linear-gradient(90deg, hsl(0, 96%, 39%) 0%, hsl(0, 93%, 28%) 100%);
   background: -webkit-linear-gradient(90deg, hsl(0, 96%, 39%) 0%, hsl(0, 93%, 28%) 100%);
-}
-@media (max-width: 1200px) {
-  .logo-section {
-    width: 21rem;
-    max-width: calc(100% - 65px);
-  }
 }
 
 .primary-button {
@@ -13522,11 +13516,6 @@ nav .nav-cta-div .nav-cta {
   padding: 1rem 0;
   position: relative;
   z-index: 2;
-}
-@media (max-width: 1200px) {
-  .first-nav {
-    display: none;
-  }
 }
 .first-nav a {
   color: #fcfef7;
@@ -14082,10 +14071,16 @@ nav .nav-cta-div .nav-cta {
 .full-cta .flex {
   display: flex;
   align-items: center;
+  gap: 0;
 }
 .full-cta .flex .img-side {
   width: 50%;
   max-height: 20rem;
+}
+@media (max-width: 992px) {
+  .full-cta .flex .img-side {
+    width: 0%;
+  }
 }
 .full-cta .flex .img-side img {
   width: 100%;
@@ -14098,9 +14093,20 @@ nav .nav-cta-div .nav-cta {
   background-color: rgba(196, 4, 4, 0.8980392157);
   position: relative;
 }
+@media (max-width: 992px) {
+  .full-cta .flex .text-side {
+    width: 100%;
+    background-color: rgba(196, 4, 4, 0.8156862745);
+  }
+}
 .full-cta .flex .text-side h4, .full-cta .flex .text-side .h4 {
   font-weight: 600;
   color: #fcfef7;
+}
+@media (max-width: 992px) {
+  .full-cta .flex .text-side h4, .full-cta .flex .text-side .h4 {
+    text-align: center;
+  }
 }
 .full-cta .flex .text-side .btn {
   padding: 8px auto;
@@ -14214,6 +14220,11 @@ nav .nav-cta-div .nav-cta {
   display: flex;
   padding: 2rem 0;
 }
+@media (max-width: 992px) {
+  .resources .flex {
+    flex-wrap: wrap;
+  }
+}
 .resources .flex .resource {
   padding: 1rem;
   border-radius: 14px;
@@ -14235,6 +14246,15 @@ nav .nav-cta-div .nav-cta {
   font-size: 22px;
   font-weight: 600;
   min-height: 3.3rem;
+}
+.resources .flex .buttons-flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 450px) {
+  .resources .flex .buttons-flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .services {
