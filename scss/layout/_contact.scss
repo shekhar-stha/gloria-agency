@@ -1,68 +1,62 @@
-.contact {
-
+.contact-bars {
     .flex {
-        display: flex;
-        justify-content: space-between;
-        gap: 0rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        min-height: 15rem;
+        gap: 0;
 
         @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .column {
+            display: flex;
             flex-direction: column;
-            row-gap: 1rem;
-        }
+            align-items: center;
+            // background-color: $primary;
+            padding: 2rem 1rem;
 
-        .info-section {
-            width: 30%;
-            background-color: $dark;
-            padding: 2rem 1.5rem;
-
-            @media (max-width: 1400px) {
-                width: 45%;
+            &:nth-of-type(even) {
+                background-color: #d61c1c;
             }
 
-            @media (max-width: 992px) {
-                width: 100%;
+            &:nth-of-type(odd) {
+                background-color: $primary;
             }
 
-            h4 {
-                color: $secondary;
-                font-weight: 600;
-                font-size: 35px;
-                padding-bottom: 2rem;
 
+            @media (max-width: 992px) and (min-width: 576px) {
+                border-bottom: 1px solid #a1a1a1;
             }
 
-            .unit {
+            .icon-div {
+                font-size: 3rem;
                 color: $white;
-                display: flex;
-                align-items: center;
-                flex-direction: row;
-                padding-bottom: 2rem;
+            }
+
+            .title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: $white;
+                margin-bottom: 1.4rem;
+            }
+
+            p,
+            a {
+                font-size: 1rem;
+                color: $white;
+                text-align: center;
+                margin-bottom: 0.5rem;
+
                 i {
-                    color: $secondary;
-                }
-
-                a {
-                    color: $white;
-                    text-decoration: underline !important;
+                    margin-right: 0.2rem;
                 }
             }
         }
 
-        .map-section {
-            width: 70%;
-
-            @media (max-width: 1400px) {
-                width: 55%;
-            }
-
-            @media (max-width: 992px) {
-                width: 100%;
-
-                iframe {
-                    min-height: 20rem;
-                }
-            }
-
-        }
     }
 }
