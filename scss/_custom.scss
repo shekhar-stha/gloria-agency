@@ -31,6 +31,11 @@ $grid-breakpoints: (
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // @import "~bootstrap/scss/bootstrap";
+
+.fw-300{
+    font-weight: 300;
+}
+
 .fw-400 {
     font-weight: 400;
 }
@@ -117,11 +122,18 @@ p {
 .btn-primary {
     color: $white;
     font-weight: 500;
-    border: 2px solid $primary;
+    border: 2px solid transparent;
+    background: hsla(0, 96%, 39%, 1);
+
+    background: linear-gradient(90deg, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
 
     &:hover {
         color: $primary;
-        background-color: transparent;
+        background: transparent;
         border: 2px solid $primary;
     }
 }
@@ -238,7 +250,7 @@ section {
 
 .header {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 2rem;
 

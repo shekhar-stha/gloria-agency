@@ -1,7 +1,7 @@
 /* Fist Nav */
 .first-nav {
     background-color: $dark;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: relative;
     z-index: 2;
 
@@ -74,21 +74,32 @@
             color: $white;
             padding: 0 2rem;
             text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-            font-weight: 600;
-            font-size: 45px;
+            font-weight: 400;
+            font-size: 52px;
             line-height: 60px;
             margin-bottom: 2.5rem;
+
+            span {
+                font-size: 45px;
+            }
 
             @media (max-width: 768px) {
                 width: 100%;
                 padding: 0 0rem;
                 font-size: 40px;
+
+                span {
+                    font-size: 35px;
+                }
             }
 
             @media (max-width: 576px) {
                 font-size: 35px;
                 margin-bottom: 1rem;
                 line-height: inherit;
+                span {
+                    font-size: 33px;
+                }
             }
         }
 
@@ -130,7 +141,7 @@
             position: absolute;
             content: "";
             background: rgb(28, 1, 1);
-            background: linear-gradient(180deg, rgba(28, 1, 1, 0.9613095238095238) 1%, rgba(0, 0, 0, 0.695203081232493) 48%);
+            background: linear-gradient(180deg, rgb(4 1 20 / 96%) 1%, rgba(0, 0, 0, 0.6952030812) 48%); 
             width: 100%;
             height: 100%;
             top: 0;
@@ -158,6 +169,22 @@
         @media (max-width: 1200px) {
             padding: 3rem 0rem 9rem;
         }
+
+        h1{
+            font-weight: 500;
+            span{
+                font-size: 30px;
+                font-weight: 500;
+
+                @media (max-width: 768px) {  
+                        font-size: 27px;
+                }
+    
+                @media (max-width: 576px) {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 }
 
@@ -169,7 +196,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3.5rem;
-        background-color: $white;
         border-radius: 8px;
         width: 65%;
         // margin-bottom: 3rem;
@@ -235,6 +261,42 @@
     }
 }
 
+// Maps
+.maps {
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);  
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);  
+        }
+
+        a {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: auto;
+                margin: 0 auto;
+                max-height: 15rem;
+                object-fit: contain;
+            }
+
+            p {
+                width: 100%;
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
 // Text CTA
 .text-cta {
     .first-header {
@@ -254,9 +316,9 @@
 }
 
 // Step Process
-.step-process-white.step-process{
+// .step-process-white.step-process{
 
-}
+// }
 .step-process {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 3rem 0;

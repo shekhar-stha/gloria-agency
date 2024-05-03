@@ -31,7 +31,7 @@ nav {
 
         .nav-link {
             color: $dark;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 500;
             text-transform: capitalize;
             border-bottom: 4px solid transparent;
@@ -68,12 +68,18 @@ nav {
             
             background: -webkit-linear-gradient(90deg, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
             height: auto;
-            min-width: 8rem;
+            min-width: 15rem;
             padding: 1rem 0;
             border-radius: 4px;
-            width: fit-content;
+            // width: fit-content;
             color: $white;
             font-weight: 600;
+
+            &:hover {
+                background: transparent;
+                border: 2px solid $primary;
+                color: $primary;
+            }
 
             @media (min-width: 1200px) {
                 margin-left: 2rem;
@@ -83,7 +89,7 @@ nav {
 }
 
 .logo {
-    width: 11rem;
+    width: 14rem;
     z-index: 10;
     position: relative;
 
