@@ -132,9 +132,8 @@ p {
     background: -webkit-linear-gradient(90deg, hsla(0, 96%, 39%, 1) 0%, hsla(0, 93%, 28%, 1) 100%);
 
     &:hover {
-        color: $primary;
-        background: transparent;
-        border: 2px solid $primary;
+        background: hsla(0, 96%, 39%, 1);
+        background: linear-gradient(90deg, rgb(156, 2, 2) 0%, rgb(117, 1, 1) 100%);
     }
 }
 
@@ -241,6 +240,7 @@ a {
 
 body {
     background-color: #f8f8f8;
+    font-size: 17px
 }
 
 section {

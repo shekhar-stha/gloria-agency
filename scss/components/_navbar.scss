@@ -75,10 +75,10 @@ nav {
             color: $white;
             font-weight: 600;
 
+
             &:hover {
-                background: transparent;
-                border: 2px solid $primary;
-                color: $primary;
+                background: hsla(0, 96%, 39%, 1);
+                background: linear-gradient(90deg, rgb(156, 2, 2) 0%, rgb(117, 1, 1) 100%);
             }
 
             @media (min-width: 1200px) {
